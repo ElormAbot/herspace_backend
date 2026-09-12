@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: herspace-ussd
+    runtime: docker
+    plan: free
+
+    healthCheckPath: /health
+
+    envVars:
+      - key: APP_NAME
+        value: HerSpace
+
+      - key: DEMO_CODE
+        value: "*700*123#"
